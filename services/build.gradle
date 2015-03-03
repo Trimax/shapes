@@ -1,0 +1,24 @@
+services {
+    apply plugin: "android"
+
+    buildToolsVersion "20.0.0"
+    compileSdkVersion 20
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+    }
+
+    eclipse.project {
+        name = appName + "-core"
+    }
+
+    dependencies {
+        compile 'com.android.support:appcompat-v7:21.0.3'
+    }
+}
