@@ -226,22 +226,8 @@
   <component name="ProjectType">
     <option name="id" value="Android" />
   </component>
-  <component name="SvnBranchConfigurationManager">
-    <option name="myConfigurationMap">
-      <map>
-        <entry key="$PROJECT_DIR$">
-          <value>
-            <SvnBranchConfiguration>
-              <option name="trunkUrl" value="https://94.19.100.19/svn/ruby" />
-            </SvnBranchConfiguration>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="mySupportsUserInfoFilter" value="true" />
-  </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
   <component name="libraryTable">
     <library name="gdx-1.5.4">
