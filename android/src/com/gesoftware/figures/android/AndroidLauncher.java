@@ -12,7 +12,6 @@ import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
 import com.gesoftware.figures.managers.AchievementsManager;
 import com.gesoftware.figures.managers.AdManager;
-import com.gesoftware.figures.managers.ThemesManager;
 import com.gesoftware.figures.services.IServices;
 import com.gesoftware.figures.services.IAdService;
 import com.gesoftware.figures.RubyGame;
@@ -28,6 +27,8 @@ public class AndroidLauncher extends AndroidApplication implements IServices, IA
     private final static int REQUEST_ACHIEVEMENTS =1;
 
     private AdView m_ADView;
+
+    private boolean m_SignedIn = false;
 
 	@Override
 	protected void onCreate (Bundle savedInstanceState) {
@@ -173,12 +174,12 @@ public class AndroidLauncher extends AndroidApplication implements IServices, IA
 
     @Override
     public final void onSignInFailed() {
-
+        m_SignedIn = false;
     }
 
     @Override
     public final void onSignInSucceeded() {
-
+        m_SignedIn = true;
     }
 
     @Override
@@ -194,6 +195,11 @@ public class AndroidLauncher extends AndroidApplication implements IServices, IA
 
     @Override
     public final void showAchievements() {
+        if (!m_SignedIn) {
+            signIn();
+            return;
+        }
+
         try {
             runOnUiThread(new Runnable() {
                 public final void run() {
@@ -205,6 +211,11 @@ public class AndroidLauncher extends AndroidApplication implements IServices, IA
 
     @Override
     public final void showLeaderboard() {
+        if (!m_SignedIn) {
+            signIn();
+            return;
+        }
+
         try {
             runOnUiThread(new Runnable() {
                 public final void run() {
