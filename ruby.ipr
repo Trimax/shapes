@@ -217,6 +217,7 @@
       <module fileurl="file://$PROJECT_DIR$/html/html.iml" filepath="$PROJECT_DIR$/html/html.iml" />
       <module fileurl="file://$PROJECT_DIR$/ios/ios.iml" filepath="$PROJECT_DIR$/ios/ios.iml" />
       <module fileurl="file://$PROJECT_DIR$/ruby.iml" filepath="$PROJECT_DIR$/ruby.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shapes.iml" filepath="$PROJECT_DIR$/shapes.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="JDK 1.7" project-jdk-type="JavaSDK">
@@ -243,108 +244,108 @@
     <mapping directory="" vcs="svn" />
   </component>
   <component name="libraryTable">
-    <library name="gdx-1.5.3">
+    <library name="gdx-1.5.4">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.5.3/3b8f2a7e697b097735ec8fd2b9d576d0959cb7c9/gdx-1.5.3.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.5.4/c16e1a0088ae7f0cac4a8d6595be32432e6069f4/gdx-1.5.4.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.5.3/5ae3e32b01bcaa3d97d819b39c04da78d094563b/gdx-1.5.3-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.5.4/3bc504d7330fbbc432a0fa97e64ae118632d1a86/gdx-1.5.4-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="gdx-1.5.3-sources">
+    <library name="gdx-1.5.4-sources">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.5.3/5ae3e32b01bcaa3d97d819b39c04da78d094563b/gdx-1.5.3-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.5.4/3bc504d7330fbbc432a0fa97e64ae118632d1a86/gdx-1.5.4-sources.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.5.3/5ae3e32b01bcaa3d97d819b39c04da78d094563b/gdx-1.5.3-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.5.4/3bc504d7330fbbc432a0fa97e64ae118632d1a86/gdx-1.5.4-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="gdx-backend-android-1.5.3">
+    <library name="gdx-backend-android-1.5.4">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-android/1.5.3/903703e4eca4d27092cf61412b7a583aa26d14ad/gdx-backend-android-1.5.3.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-android/1.5.4/7b974b501dc92361698a1f6251f9e7b308582c08/gdx-backend-android-1.5.4.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-android/1.5.3/a7d54d1134790c1baec1e32ad15b0104ef79d93b/gdx-backend-android-1.5.3-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-android/1.5.4/494ea86b57d0fbcd1c89408b1db12eb27bba9f4f/gdx-backend-android-1.5.4-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="gdx-backend-gwt-1.5.3">
+    <library name="gdx-backend-gwt-1.5.4">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-gwt/1.5.3/1e0899bca6d1784277114f809272a3414b572ee2/gdx-backend-gwt-1.5.3.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-gwt/1.5.4/8d008d0a45f30326539a6f69e6fd9829d62de989/gdx-backend-gwt-1.5.4.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-gwt/1.5.3/81ca8999ab62a6a710b9798c5c0b899f4e6f1753/gdx-backend-gwt-1.5.3-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-gwt/1.5.4/94020cade7fbcaea47ca338210e17a44d48645bc/gdx-backend-gwt-1.5.4-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="gdx-backend-gwt-1.5.3-sources">
+    <library name="gdx-backend-gwt-1.5.4-sources">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-gwt/1.5.3/81ca8999ab62a6a710b9798c5c0b899f4e6f1753/gdx-backend-gwt-1.5.3-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-gwt/1.5.4/94020cade7fbcaea47ca338210e17a44d48645bc/gdx-backend-gwt-1.5.4-sources.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-gwt/1.5.3/81ca8999ab62a6a710b9798c5c0b899f4e6f1753/gdx-backend-gwt-1.5.3-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-gwt/1.5.4/94020cade7fbcaea47ca338210e17a44d48645bc/gdx-backend-gwt-1.5.4-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="gdx-backend-lwjgl-1.5.3">
+    <library name="gdx-backend-lwjgl-1.5.4">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-lwjgl/1.5.3/1dac61f666ee49787b623de5ac006245a06572b1/gdx-backend-lwjgl-1.5.3.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-lwjgl/1.5.4/6bbdafa819266783697ef7a7393d1fea511c76d9/gdx-backend-lwjgl-1.5.4.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-lwjgl/1.5.3/dc9bac8b2438e9d9620bbd14cd46223e8bf7cf9c/gdx-backend-lwjgl-1.5.3-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-lwjgl/1.5.4/644f82d4fe4b186de69148d6b48ab71c67fbe234/gdx-backend-lwjgl-1.5.4-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="gdx-backend-robovm-1.5.3">
+    <library name="gdx-backend-robovm-1.5.4">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-robovm/1.5.3/b2788b9d356f2ebe965e03f3140f26dbbacdfc49/gdx-backend-robovm-1.5.3.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-robovm/1.5.4/efa63db006899c59c55e776ce254c2a455afc781/gdx-backend-robovm-1.5.4.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-robovm/1.5.3/db87f7c454e4b049f82e8390241d3d3a07365d56/gdx-backend-robovm-1.5.3-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-robovm/1.5.4/2622a744bf80a6d9e297dd11a064ea7e4251640/gdx-backend-robovm-1.5.4-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="gdx-freetype-1.5.3">
+    <library name="gdx-freetype-1.5.4">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-freetype/1.5.3/f77c1547eca7c5f508367f7034a509677b157a8b/gdx-freetype-1.5.3.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-freetype/1.5.4/907d182cd9d32e9d77834baf1ae0d91abc2e0a0a/gdx-freetype-1.5.4.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-freetype/1.5.3/b76720b4b7aada6d6a70e7765dc44e8d1fbdf068/gdx-freetype-1.5.3-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-freetype/1.5.4/a40493c0d68ed00ae2902657908beae64deaf042/gdx-freetype-1.5.4-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="gdx-freetype-platform-1.5.3-natives-desktop">
+    <library name="gdx-freetype-platform-1.5.4-natives-desktop">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-freetype-platform/1.5.3/7f1207c7f94912d317ae5e81d5ebc9d9262aabc0/gdx-freetype-platform-1.5.3-natives-desktop.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-freetype-platform/1.5.4/916a2fff7a3e6f6625f6fc6ca3c0e9bbade989d2/gdx-freetype-platform-1.5.4-natives-desktop.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
     </library>
-    <library name="gdx-platform-1.5.3-natives-desktop">
+    <library name="gdx-platform-1.5.4-natives-desktop">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-platform/1.5.3/ca6446f72f86f99ae181da5d327094aa758f2023/gdx-platform-1.5.3-natives-desktop.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-platform/1.5.4/59717180af429ddb0396ed5b6baabfd9a9e11752/gdx-platform-1.5.4-natives-desktop.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
     </library>
-    <library name="gwt-servlet-2.7.0">
+    <library name="gwt-servlet-2.6.1">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gwt/gwt-servlet/2.7.0/6d5ed85568c13295374ba24194a987c0d952f3eb/gwt-servlet-2.7.0.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gwt/gwt-servlet/2.6.1/983e26ec957ee3463f8554f4f03a58e16129e8f2/gwt-servlet-2.6.1.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gwt/gwt-servlet/2.7.0/2abdc607f5101c9f431f1e671ee30061d42b8906/gwt-servlet-2.7.0-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gwt/gwt-servlet/2.6.1/c32cc6470243fe2703e807e1025ec3354fba0ef8/gwt-servlet-2.6.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="gwt-user-2.6.0">
+    <library name="gwt-user-2.6.1">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gwt/gwt-user/2.6.0/8237d1bd37127188107388c8724be44a0e9f73ca/gwt-user-2.6.0.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gwt/gwt-user/2.6.1/c078b1b8cc0281214b0eb458d2c283d039374fad/gwt-user-2.6.1.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gwt/gwt-user/2.6.0/7a59cc91e16f255d22b692dcc5839d3eb1d606c6/gwt-user-2.6.0-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gwt/gwt-user/2.6.1/c32cc6470243fe2703e807e1025ec3354fba0ef8/gwt-user-2.6.1-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="jinput-2.0.5">
@@ -452,37 +453,37 @@
     </library>
     <library name="play-services-6.5.87">
       <CLASSES>
-        <root url="file://$PROJECT_DIR$/android/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res" />
         <root url="jar://$PROJECT_DIR$/android/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/classes.jar!/" />
+        <root url="file://$PROJECT_DIR$/android/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
     </library>
-    <library name="robovm-cocoatouch-1.0.0-beta-03">
+    <library name="robovm-cocoatouch-1.0.0-beta-04">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.robovm/robovm-cocoatouch/1.0.0-beta-03/6746678424032bde2837e4d37e76b7322c7d9df/robovm-cocoatouch-1.0.0-beta-03.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.robovm/robovm-cocoatouch/1.0.0-beta-04/7ab90fc8435e50064224b8cd208266b82d46732e/robovm-cocoatouch-1.0.0-beta-04.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.robovm/robovm-cocoatouch/1.0.0-beta-03/cb697b04e4f2988cc547d3605f3790fdbd8e83da/robovm-cocoatouch-1.0.0-beta-03-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.robovm/robovm-cocoatouch/1.0.0-beta-04/39e9821129a871e9d9c6d58284925589577c8fb0/robovm-cocoatouch-1.0.0-beta-04-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="robovm-objc-1.0.0-beta-03">
+    <library name="robovm-objc-1.0.0-beta-04">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.robovm/robovm-objc/1.0.0-beta-03/a490841c2e1c28b2d7819223eb243fa509349115/robovm-objc-1.0.0-beta-03.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.robovm/robovm-objc/1.0.0-beta-04/7d68b051f43910708522a318553fec6f7acc9701/robovm-objc-1.0.0-beta-04.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.robovm/robovm-objc/1.0.0-beta-03/77f02f98bd6a69f42eb8bca827c65cd619c14edb/robovm-objc-1.0.0-beta-03-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.robovm/robovm-objc/1.0.0-beta-04/4342ab1b4696ca6a1c8cbbd7b3567b2a3ae8355f/robovm-objc-1.0.0-beta-04-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="robovm-rt-1.0.0-beta-03">
+    <library name="robovm-rt-1.0.0-beta-04">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.robovm/robovm-rt/1.0.0-beta-03/ac60c382ae880d311a91bc6aa745e809c02ad28f/robovm-rt-1.0.0-beta-03.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.robovm/robovm-rt/1.0.0-beta-04/249f9ce4bc6571970393672b0016c3e4b97f64f8/robovm-rt-1.0.0-beta-04.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.robovm/robovm-rt/1.0.0-beta-03/e8f5216f12873608694056195399b464ca07d917/robovm-rt-1.0.0-beta-03-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.robovm/robovm-rt/1.0.0-beta-04/f95ca6b453519d93481fb9df5328a3af5d41d5c0/robovm-rt-1.0.0-beta-04-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="support-annotations-21.0.3">
@@ -496,14 +497,12 @@
     </library>
     <library name="support-v4-21.0.3">
       <CLASSES>
+        <root url="file://$PROJECT_DIR$/android/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/res" />
         <root url="jar://$PROJECT_DIR$/android/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar!/" />
         <root url="jar://$PROJECT_DIR$/android/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar!/" />
-        <root url="file://$PROJECT_DIR$/android/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/res" />
       </CLASSES>
       <JAVADOC />
-      <SOURCES>
-        <root url="jar://C:/AndroidSDK/extras/android/m2repository/com/android/support/support-v4/21.0.3/support-v4-21.0.3-sources.jar!/" />
-      </SOURCES>
+      <SOURCES />
     </library>
     <library name="validation-api-1.0.0.GA">
       <CLASSES>
@@ -564,5 +563,8 @@
         </UIState>
       </state>
     </states>
+  </component>
+  <component name="nnBranchConfigurationManager">
+    <option name="mySupportsUserInfoFilter" value="true" />
   </component>
 </project>
