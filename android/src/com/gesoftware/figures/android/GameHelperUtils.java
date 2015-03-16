@@ -28,8 +28,8 @@ class GameHelperUtils {
     };
 
     private final static int[] RES_IDS = {
-            R.string.gamehelper_unknown_error, R.string.gamehelper_sign_in_failed,
-            R.string.gamehelper_app_misconfigured, R.string.gamehelper_license_failed
+            R.string.unknown_error, R.string.sign_in_failed,
+            R.string.app_misconfigured, R.string.license_failed
     };
 
     static String activityResponseCodeToString(int respCode) {

@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Фигурки</string>
+    <string name="sign_in_failed">Невозможно аутентифицироваться. Пожалуйста, проверьте соединение с интернетом и попробуйте снова.</string>
+    <string name="app_misconfigured">Приложение некорректно сконфигурировано. Удостоверьтесь в том что имя пакета и сертификат совпадают с идентификатором в консоли разработчика.</string>
+    <string name="license_failed">Некорректная лицензия.</string>
+    <string name="unknown_error">Неизвестная ошибка.</string>
 </resources>
