@@ -115,7 +115,5 @@ public final class AchievementsManager {
     private static void unlock(final Achievement achievement) {
         if (m_Service != null)
             m_Service.unlockAchievement(achievement.getID());
-
-        ScoreManager.addScore(achievement.getScore());
     }
 }

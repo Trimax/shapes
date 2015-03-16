@@ -7,6 +7,8 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.gesoftware.figures.Definitions;
 import com.gesoftware.figures.managers.*;
 
+import java.util.Set;
+
 public final class Header extends Group {
     private final Image m_Rating;
 
@@ -40,10 +42,10 @@ public final class Header extends Group {
         addActor(m_ScoreCurrent);
     }
 
-    public final void animateScore(final int value) {
+    public final void animateScore(final int value, final Set<Ruby> figure) {
         final Text text = new Text("+" + value, FontsManager.getLabelScoreDarkFont(),
-                m_Rating.getX() + (m_Rating.getWidth() - FontsManager.getLabelScoreDarkFont().getBounds("+" + value).width) / 2f,
-                m_Rating.getY() + m_Rating.getHeight() / 2f);
+                                   m_Rating.getX() + (m_Rating.getWidth() - FontsManager.getLabelScoreDarkFont().getBounds("+" + value).width) / 2f,
+                                   m_Rating.getY() + m_Rating.getHeight() / 2f);
 
         text.addAction(Actions.sequence(Actions.moveTo(text.getX(), text.getY() + Definitions.c_DistanceScore, Definitions.c_DurationScore), Actions.run(new Runnable() {
             @Override

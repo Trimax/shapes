@@ -81,7 +81,7 @@ public final class ReduceManager {
             reduces.addAction(action);
         }
 
-        ScoreManager.addScore((int) Math.pow(figure.size(), 2));
+        ScoreManager.addScore((int) Math.pow(figure.size(), 2), figure);
         AchievementsManager.tryUnlock();
 
         return true;
