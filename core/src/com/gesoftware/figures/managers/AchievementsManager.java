@@ -113,7 +113,12 @@ public final class AchievementsManager {
     }
 
     private static void unlock(final Achievement achievement) {
-        if (m_Service != null)
+        if (PreferencesManager.has(achievement.getID()))
+            return;
+
+        if (m_Service != null) {
             m_Service.unlockAchievement(achievement.getID());
+            PreferencesManager.putString(achievement.getID(), achievement.getID());
+        }
     }
 }
