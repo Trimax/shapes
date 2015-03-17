@@ -135,7 +135,7 @@ public final class RubyStage extends Stage {
             }
         };
 
-        if (Gdx.app.getType() == Application.ApplicationType.Android || Gdx.app.getType() == Application.ApplicationType.iOS) {
+        if (Gdx.app.getType() == Application.ApplicationType.Android || Gdx.app.getType() == Application.ApplicationType.iOS || Gdx.app.getType() == Application.ApplicationType.WebGL ) {
             m_InputProcessor = new GestureDetector(new GestureInputProcessor(m_InputProcessor));
         }
 
