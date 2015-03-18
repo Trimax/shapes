@@ -27,7 +27,9 @@ public final class MenuScreen implements Screen {
     private Table m_Table;
     private Image m_Rating;
     private Text m_ScoreBest;
-    private ClickableButton m_PlayButton;
+    private ClickableButton m_PlayTimeModeButton;
+    private ClickableButton m_PlayMoveModeButton;
+    private ClickableButton m_PlayUnlimitedModeButton;
     private ClickableButton m_AchievementsButton;
     private ClickableButton m_LeaderBoardButton;
     private ToggleButton m_ChangeThemeButton;
@@ -49,14 +51,17 @@ public final class MenuScreen implements Screen {
     }
 
     private void createButtons() {
-        final int buttonWidth  = (int) (Gdx.graphics.getWidth() * .5f);
-        final int buttonHeight = (int) (Gdx.graphics.getWidth() * .2f);
+        final int buttonSize       = (int) (Gdx.graphics.getWidth() * .3f);
+        final int buttonSmallSize  = (int) (buttonSize * .5f);
 
-        m_PlayButton         = new ClickableButton(buttonWidth, buttonHeight, Utils.getRGBColor(152, 220, 85), Utils.getRGBColor(126, 181, 72), TexturesManager.getTexture("play.png"), 0.3f);
-        m_AchievementsButton = new ClickableButton((int)(buttonWidth * 0.5f) - TABLE_CELL_PADDING, buttonHeight, Utils.getRGBColor(237, 149, 74), Utils.getRGBColor(218, 127, 29), TexturesManager.getTexture("achievements.png"));
-        m_LeaderBoardButton  = new ClickableButton((int)(buttonWidth * 0.5f) - TABLE_CELL_PADDING, buttonHeight, Utils.getRGBColor(126, 142, 213), Utils.getRGBColor(104, 117, 176), TexturesManager.getTexture("leaderboard.png"));
-        m_ChangeThemeButton  = new ToggleButton((int)(buttonWidth * 0.3f),
-                                                (int)(buttonWidth * 0.3f),
+        m_PlayTimeModeButton         = new ClickableButton(buttonSize, buttonSize, Utils.getRGBColor(2, 191, 230), Utils.getRGBColor(2, 164, 202), TexturesManager.getTexture("time.png"), 0.5f);
+        m_PlayMoveModeButton         = new ClickableButton(buttonSize, buttonSize, Utils.getRGBColor(255, 151, 64), Utils.getRGBColor(237, 133, 67), TexturesManager.getTexture("move.png"), 0.5f);
+        m_PlayUnlimitedModeButton    = new ClickableButton(buttonSize, buttonSize, Utils.getRGBColor(250, 102, 85), Utils.getRGBColor(235, 102, 84), TexturesManager.getTexture("infinity.png"), 0.5f);
+
+        m_AchievementsButton = new ClickableButton(buttonSize, buttonSize, Utils.getRGBColor(237, 149, 74), Utils.getRGBColor(218, 127, 29), TexturesManager.getTexture("achievements.png"));
+        m_LeaderBoardButton  = new ClickableButton(buttonSize, buttonSize, Utils.getRGBColor(2, 204, 132), Utils.getRGBColor(2, 184, 112), TexturesManager.getTexture("leaderboard.png"));
+        m_ChangeThemeButton  = new ToggleButton(buttonSmallSize,
+                                                buttonSmallSize,
                                                 ThemesManager.getCurrentTheme().getColor(),
                                                 Color.LIGHT_GRAY,
                                                 ThemesManager.getCurrentTheme() == Theme.Dark,
@@ -70,7 +75,7 @@ public final class MenuScreen implements Screen {
             }
         };
 
-        m_RateButton  = new Button((int)(buttonWidth * 0.3f), (int)(buttonWidth * 0.3f), TexturesManager.getTexture("star.png"), 0.7f);
+        m_RateButton  = new Button(buttonSmallSize, buttonSmallSize, TexturesManager.getTexture("star.png"), 0.7f);
         m_RateButton.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
@@ -78,7 +83,31 @@ public final class MenuScreen implements Screen {
             }
         });
 
-        m_PlayButton.addListener(new ClickListener() {
+        m_PlayTimeModeButton.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                fadeOutAnimation(new Runnable() {
+                    @Override
+                    public final void run() {
+                        DataManager.m_RubyGame.setScreen(new RubyScreen());
+                    }
+                });
+            }
+        });
+
+        m_PlayMoveModeButton.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                fadeOutAnimation(new Runnable() {
+                    @Override
+                    public final void run() {
+                        DataManager.m_RubyGame.setScreen(new RubyScreen());
+                    }
+                });
+            }
+        });
+
+        m_PlayUnlimitedModeButton.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
                 fadeOutAnimation(new Runnable() {
@@ -118,9 +147,10 @@ public final class MenuScreen implements Screen {
         m_Table.row();
         m_Table.add(Utils.wrapToGroup(m_ScoreBest)).colspan(2).height(m_ScoreBest.getHeight() / 4).expandY().top();
         m_Table.row();
-        m_Table.add(Utils.wrapToGroup(m_PlayButton)).colspan(2).pad(TABLE_CELL_PADDING);
+        m_Table.add(Utils.wrapToGroup(m_PlayTimeModeButton)).pad(TABLE_CELL_PADDING).right();
+        m_Table.add(Utils.wrapToGroup(m_PlayMoveModeButton)).pad(TABLE_CELL_PADDING).left();
         m_Table.row();
-        m_Table.add(Utils.wrapToGroup(m_AchievementsButton)).pad(TABLE_CELL_PADDING).expandY().top().right();
+        m_Table.add(Utils.wrapToGroup(m_PlayUnlimitedModeButton)).pad(TABLE_CELL_PADDING).expandY().top().right();
         m_Table.add(Utils.wrapToGroup(m_LeaderBoardButton)).pad(TABLE_CELL_PADDING).expandY().top().left();
         m_Table.row();
         m_Table.add(m_ChangeThemeButton).expandX().pad(TABLE_CELL_PADDING).bottom().left();
@@ -138,21 +168,25 @@ public final class MenuScreen implements Screen {
     }
 
     private void fadeInAnimation() {
-        final Action animateHeader = Actions.parallel(Utils.moveFrom(m_Rating,             m_Rating.getX(),           2 * Definitions.c_HeaderSize,                           Definitions.c_DurationScoreFade),
-                                                      Utils.moveFrom(m_ScoreBest,          m_ScoreBest.getX(),        2 * Definitions.c_HeaderSize + m_ScoreBest.getHeight(), Definitions.c_DurationScoreFade),
-                                                      Utils.moveFrom(m_PlayButton,         -Definitions.c_SizeWindow, m_PlayButton.getY(),                                    Definitions.c_DurationMenuFade),
-                                                      Utils.moveFrom(m_AchievementsButton, -Definitions.c_SizeWindow, m_AchievementsButton.getY(),                            Definitions.c_DurationMenuFade + 0.1f),
-                                                      Utils.moveFrom(m_LeaderBoardButton,  -Definitions.c_SizeWindow, m_LeaderBoardButton.getY(),                             Definitions.c_DurationMenuFade + 0.1f)
+        final Action animateHeader = Actions.parallel(Utils.moveFrom(m_Rating,                  m_Rating.getX(),           2 * Definitions.c_HeaderSize,                           Definitions.c_DurationScoreFade),
+                                                      Utils.moveFrom(m_ScoreBest,               m_ScoreBest.getX(),        2 * Definitions.c_HeaderSize + m_ScoreBest.getHeight(), Definitions.c_DurationScoreFade),
+                                                      Utils.moveFrom(m_PlayTimeModeButton,      -Definitions.c_SizeWindow, m_PlayTimeModeButton.getY(),                            Definitions.c_DurationMenuFade),
+                                                      Utils.moveFrom(m_PlayMoveModeButton,      -Definitions.c_SizeWindow, m_PlayMoveModeButton.getY(),                            Definitions.c_DurationMenuFade + 0.1f),
+                                                      Utils.moveFrom(m_PlayUnlimitedModeButton, -Definitions.c_SizeWindow, m_PlayUnlimitedModeButton.getY(),                       Definitions.c_DurationMenuFade + 0.2f),
+                                                      Utils.moveFrom(m_AchievementsButton,      -Definitions.c_SizeWindow, m_AchievementsButton.getY(),                            Definitions.c_DurationMenuFade + 0.3f),
+                                                      Utils.moveFrom(m_LeaderBoardButton,       -Definitions.c_SizeWindow, m_LeaderBoardButton.getY(),                             Definitions.c_DurationMenuFade + 0.3f)
                                                       );
         m_Stage.addAction(animateHeader);
     }
 
     private void fadeOutAnimation(final Runnable onFinish) {
-        final Action animateHeader = Actions.parallel(Utils.moveTo(m_Rating,               m_Rating.getX(),           2 * Definitions.c_HeaderSize,                               Definitions.c_DurationScoreFade),
-                                                      Utils.moveTo(m_ScoreBest,            m_ScoreBest.getX(),        2 * Definitions.c_HeaderSize + m_ScoreBest.getHeight(), Definitions.c_DurationScoreFade),
-                                                      Utils.moveTo(m_PlayButton,           -Definitions.c_SizeWindow, m_PlayButton.getY(),                                    Definitions.c_DurationMenuFade),
-                                                      Utils.moveTo(m_AchievementsButton,   -Definitions.c_SizeWindow, m_AchievementsButton.getY(),                            Definitions.c_DurationMenuFade + 0.1f),
-                                                      Utils.moveTo(m_LeaderBoardButton,    -Definitions.c_SizeWindow, m_LeaderBoardButton.getY(),                             Definitions.c_DurationMenuFade + 0.1f));
+        final Action animateHeader = Actions.parallel(Utils.moveTo(m_Rating,                  m_Rating.getX(),           2 * Definitions.c_HeaderSize,                           Definitions.c_DurationScoreFade),
+                                                      Utils.moveTo(m_ScoreBest,               m_ScoreBest.getX(),        2 * Definitions.c_HeaderSize + m_ScoreBest.getHeight(), Definitions.c_DurationScoreFade),
+                                                      Utils.moveTo(m_PlayTimeModeButton,      -Definitions.c_SizeWindow, m_PlayTimeModeButton.getY(),                            Definitions.c_DurationMenuFade),
+                                                      Utils.moveTo(m_PlayMoveModeButton,      -Definitions.c_SizeWindow, m_PlayMoveModeButton.getY(),                            Definitions.c_DurationMenuFade + 0.1f),
+                                                      Utils.moveTo(m_PlayUnlimitedModeButton, -Definitions.c_SizeWindow, m_PlayUnlimitedModeButton.getY(),                       Definitions.c_DurationMenuFade + 0.2f),
+                                                      Utils.moveTo(m_AchievementsButton,   -Definitions.c_SizeWindow, m_AchievementsButton.getY(),                               Definitions.c_DurationMenuFade + 0.3f),
+                                                      Utils.moveTo(m_LeaderBoardButton,    -Definitions.c_SizeWindow, m_LeaderBoardButton.getY(),                                Definitions.c_DurationMenuFade + 0.3f));
 
         m_Stage.addAction(Actions.sequence(animateHeader, Actions.run(onFinish)));
     }
