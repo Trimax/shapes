@@ -26,7 +26,6 @@ public final class MenuScreen implements Screen {
     private Stage m_Stage;
     private Table m_Table;
     private Image m_Rating;
-    private Text m_ScoreBest;
     private ClickableButton m_PlayTimeModeButton;
     private ClickableButton m_PlayMoveModeButton;
     private ClickableButton m_PlayUnlimitedModeButton;
@@ -42,12 +41,10 @@ public final class MenuScreen implements Screen {
     }
 
     private void createHeader() {
-        final Texture ratingTexture = TexturesManager.getTexture("rating.png");
+        float titleHeight = Gdx.graphics.getHeight() * .15f;
+        final Texture ratingTexture = TexturesManager.getTexture("title.png");
         m_Rating = new Image(ratingTexture);
-        m_Rating.setSize(Definitions.c_HeaderSize, Definitions.c_HeaderSize);
-
-        m_ScoreBest = new Text(String.valueOf(ScoreManager.getBestScore()), FontsManager.getLabelBestScoreFont(), m_Rating.getX(), m_Rating.getY());
-        m_ScoreBest.update();
+        m_Rating.setSize(ratingTexture.getWidth() / ratingTexture.getHeight() * titleHeight, titleHeight);
     }
 
     private void createButtons() {
@@ -143,9 +140,7 @@ public final class MenuScreen implements Screen {
     private void createTable() {
         m_Table = new Table();
         m_Table.setFillParent(true);
-        m_Table.add(Utils.wrapToGroup(m_Rating)).colspan(2).height(Definitions.c_HeaderSize).width(Definitions.c_HeaderSize).padTop(Definitions.c_HeaderSize / 4);
-        m_Table.row();
-        m_Table.add(Utils.wrapToGroup(m_ScoreBest)).colspan(2).height(m_ScoreBest.getHeight() / 4).expandY().top();
+        m_Table.add(Utils.wrapToGroup(m_Rating)).colspan(2).padTop(Definitions.c_HeaderSize / 4).expandY().top();
         m_Table.row();
         m_Table.add(Utils.wrapToGroup(m_PlayTimeModeButton)).pad(TABLE_CELL_PADDING).right();
         m_Table.add(Utils.wrapToGroup(m_PlayMoveModeButton)).pad(TABLE_CELL_PADDING).left();
@@ -169,7 +164,6 @@ public final class MenuScreen implements Screen {
 
     private void fadeInAnimation() {
         final Action animateHeader = Actions.parallel(Utils.moveFrom(m_Rating,                  m_Rating.getX(),           2 * Definitions.c_HeaderSize,                           Definitions.c_DurationScoreFade),
-                                                      Utils.moveFrom(m_ScoreBest,               m_ScoreBest.getX(),        2 * Definitions.c_HeaderSize + m_ScoreBest.getHeight(), Definitions.c_DurationScoreFade),
                                                       Utils.moveFrom(m_PlayTimeModeButton,      -Definitions.c_SizeWindow, m_PlayTimeModeButton.getY(),                            Definitions.c_DurationMenuFade),
                                                       Utils.moveFrom(m_PlayMoveModeButton,      -Definitions.c_SizeWindow, m_PlayMoveModeButton.getY(),                            Definitions.c_DurationMenuFade + 0.1f),
                                                       Utils.moveFrom(m_PlayUnlimitedModeButton, -Definitions.c_SizeWindow, m_PlayUnlimitedModeButton.getY(),                       Definitions.c_DurationMenuFade + 0.2f),
@@ -181,7 +175,6 @@ public final class MenuScreen implements Screen {
 
     private void fadeOutAnimation(final Runnable onFinish) {
         final Action animateHeader = Actions.parallel(Utils.moveTo(m_Rating,                  m_Rating.getX(),           2 * Definitions.c_HeaderSize,                           Definitions.c_DurationScoreFade),
-                                                      Utils.moveTo(m_ScoreBest,               m_ScoreBest.getX(),        2 * Definitions.c_HeaderSize + m_ScoreBest.getHeight(), Definitions.c_DurationScoreFade),
                                                       Utils.moveTo(m_PlayTimeModeButton,      -Definitions.c_SizeWindow, m_PlayTimeModeButton.getY(),                            Definitions.c_DurationMenuFade),
                                                       Utils.moveTo(m_PlayMoveModeButton,      -Definitions.c_SizeWindow, m_PlayMoveModeButton.getY(),                            Definitions.c_DurationMenuFade + 0.1f),
                                                       Utils.moveTo(m_PlayUnlimitedModeButton, -Definitions.c_SizeWindow, m_PlayUnlimitedModeButton.getY(),                       Definitions.c_DurationMenuFade + 0.2f),
