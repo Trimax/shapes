@@ -51,12 +51,12 @@ public final class MenuScreen implements Screen {
         final int buttonSize       = (int) (Gdx.graphics.getWidth() * .3f);
         final int buttonSmallSize  = (int) (buttonSize * .5f);
 
-        m_PlayTimeModeButton         = new ClickableButton(buttonSize, buttonSize, Utils.getRGBColor(2, 191, 230), Utils.getRGBColor(2, 164, 202), TexturesManager.getTexture("time.png"), 0.5f);
-        m_PlayMoveModeButton         = new ClickableButton(buttonSize, buttonSize, Utils.getRGBColor(255, 151, 64), Utils.getRGBColor(237, 133, 67), TexturesManager.getTexture("move.png"), 0.5f);
-        m_PlayUnlimitedModeButton    = new ClickableButton(buttonSize, buttonSize, Utils.getRGBColor(250, 102, 85), Utils.getRGBColor(235, 102, 84), TexturesManager.getTexture("infinity.png"), 0.5f);
+        m_PlayTimeModeButton         = new ClickableButton(buttonSize, buttonSize, Utils.getRGBColor(2, 191, 230), Utils.getRGBColor(2, 142, 180), TexturesManager.getTexture("time.png"), 0.5f);
+        m_PlayMoveModeButton         = new ClickableButton(buttonSize, buttonSize, Utils.getRGBColor(255, 151, 64), Utils.getRGBColor(205, 107, 64), TexturesManager.getTexture("move.png"), 0.5f);
+        m_PlayUnlimitedModeButton    = new ClickableButton(buttonSize, buttonSize, Utils.getRGBColor(250, 102, 85), Utils.getRGBColor(199, 75, 59), TexturesManager.getTexture("infinity.png"), 0.5f);
 
         m_AchievementsButton = new ClickableButton(buttonSize, buttonSize, Utils.getRGBColor(237, 149, 74), Utils.getRGBColor(218, 127, 29), TexturesManager.getTexture("achievements.png"));
-        m_LeaderBoardButton  = new ClickableButton(buttonSize, buttonSize, Utils.getRGBColor(2, 204, 132), Utils.getRGBColor(2, 184, 112), TexturesManager.getTexture("leaderboard.png"));
+        m_LeaderBoardButton  = new ClickableButton(buttonSize, buttonSize, Utils.getRGBColor(2, 204, 132), Utils.getRGBColor(2, 152, 88), TexturesManager.getTexture("leaderboard.png"));
         m_ChangeThemeButton  = new ToggleButton(buttonSmallSize,
                                                 buttonSmallSize,
                                                 ThemesManager.getCurrentTheme().getColor(),
