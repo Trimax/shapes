@@ -5,7 +5,9 @@ import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.gesoftware.figures.Definitions;
+import com.gesoftware.figures.enums.Achievement;
 import com.gesoftware.figures.managers.*;
+import com.gesoftware.figures.math.Matrix;
 
 import java.util.Set;
 
@@ -42,7 +44,7 @@ public final class Header extends Group {
         addActor(m_ScoreCurrent);
     }
 
-    public final void animateScore(final int value, final Set<Ruby> figure) {
+    public final void animateScore(final int value, final Set<Ruby> shape) {
         final Text text = new Text("+" + value, FontsManager.getLabelScoreDarkFont(),
                                    m_Rating.getX() + (m_Rating.getWidth() - FontsManager.getLabelScoreDarkFont().getBounds("+" + value).width) / 2f,
                                    m_Rating.getY() + m_Rating.getHeight() / 2f);
@@ -54,6 +56,17 @@ public final class Header extends Group {
             }
         })));
 
+
+        final Figure figure = new Figure(shape,
+                                         m_Rating.getX() + (m_Rating.getWidth() - FontsManager.getLabelScoreDarkFont().getBounds("+" + value).width) / 2f,
+                                         m_Rating.getY() + m_Rating.getHeight() / 2f);
+        figure.addAction(Actions.sequence(Actions.moveTo(figure.getX(), figure.getY() + Definitions.c_DistanceScore, Definitions.c_DurationScore), Actions.run(new Runnable() {
+            @Override
+            public final void run() {
+                figure.remove();
+            }
+        })));
+
         m_ScoreBest.setValue(String.valueOf(ScoreManager.getBestScore()));
         m_ScoreCurrent.setValue(String.valueOf(ScoreManager.getScore()));
 
@@ -62,6 +75,7 @@ public final class Header extends Group {
 
         m_ScoreCurrent.setX(m_Rating.getX() - 20.f - m_ScoreCurrent.getWidth());
 
+        addActor(figure);
         addActor(text);
     }
 }

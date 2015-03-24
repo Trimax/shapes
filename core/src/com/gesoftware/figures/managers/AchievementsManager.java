@@ -34,7 +34,7 @@ public final class AchievementsManager {
         }
     }
 
-    private static Matrix computeMatrix(final Set<Ruby> figure) {
+    public static Matrix computeMatrix(final Set<Ruby> figure) {
         final Vec2i size = computeSize(figure);
         final int side = Math.max(size.getX(), size.getY());
         final Vec2i min  = computeMin(figure);

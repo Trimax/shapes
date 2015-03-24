@@ -70,6 +70,10 @@ public final class Ruby extends Actor {
         m_Position.set(position);
     }
 
+    public final RubyColor getRubyColor() {
+        return m_Color;
+    }
+
     @Override
     public final boolean equals(final Object o) {
         return o instanceof Ruby && m_Color == ((Ruby) o).m_Color;

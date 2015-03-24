@@ -69,4 +69,16 @@ public final class Matrix {
 
         return builder.toString();
     }
+
+    public final int getWidth() {
+        return m_Size.getX();
+    }
+
+    public final int getHeight() {
+        return m_Size.getY();
+    }
+
+    public final boolean contains(final int row, final int column) {
+        return m_Items[row][column] != 0;
+    }
 }
