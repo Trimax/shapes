@@ -63,7 +63,7 @@ public final class Definitions {
     public static final String c_Title = "Shapes";
 
     /* Score movement distance */
-    public static final float c_DistanceScore = 30.f;
+    public static final float c_DistanceScore = 80.f;
 
     /*** Properties ***/
 

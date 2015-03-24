@@ -5,9 +5,7 @@ import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.gesoftware.figures.Definitions;
-import com.gesoftware.figures.enums.Achievement;
 import com.gesoftware.figures.managers.*;
-import com.gesoftware.figures.math.Matrix;
 
 import java.util.Set;
 
@@ -47,7 +45,7 @@ public final class Header extends Group {
     public final void animateScore(final int value, final Set<Ruby> shape) {
         final Text text = new Text("+" + value, FontsManager.getLabelScoreDarkFont(),
                                    m_Rating.getX() + (m_Rating.getWidth() - FontsManager.getLabelScoreDarkFont().getBounds("+" + value).width) / 2f,
-                                   m_Rating.getY() + m_Rating.getHeight() / 2f);
+                                   m_Rating.getY() - 120f);
 
         text.addAction(Actions.sequence(Actions.moveTo(text.getX(), text.getY() + Definitions.c_DistanceScore, Definitions.c_DurationScore), Actions.run(new Runnable() {
             @Override
@@ -59,7 +57,7 @@ public final class Header extends Group {
 
         final Figure figure = new Figure(shape,
                                          Definitions.c_SizeWindow / 2,
-                                         m_Rating.getY() + m_Rating.getHeight() / 2f);
+                                         m_Rating.getY() - 120f);
         figure.addAction(Actions.sequence(Actions.moveTo(figure.getX(), figure.getY() + Definitions.c_DistanceScore, Definitions.c_DurationScore), Actions.run(new Runnable() {
             @Override
             public final void run() {

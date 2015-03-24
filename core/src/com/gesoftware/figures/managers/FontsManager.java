@@ -14,6 +14,7 @@ public final class FontsManager {
     private static BitmapFont m_GameOverLabelFont;
 
     private static final int m_DefaultScoreLabelSize = getScaledFont(60);
+    private static final int m_ScorePopupSize        = getScaledFont(80);
 
     public static void init() {
         createLabelScoreDarkFont();
@@ -33,7 +34,7 @@ public final class FontsManager {
     }
 
     private static void createLabelScoreDarkFont() {
-        m_LabelScoreDarkFont = getBitmapFont(m_DefaultScoreLabelSize);
+        m_LabelScoreDarkFont = getBitmapFont(m_ScorePopupSize);
         m_LabelScoreDarkFont.setColor(Utils.getRGBColor(119, 110, 101, 0.9f));
     }
 

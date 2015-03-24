@@ -50,6 +50,7 @@ public final class Figure extends Actor {
     }
 
     private void draw(final Batch batch, final int row, final int column, final float parentAlpha) {
-        batch.draw(m_Texture, getX() + row * Definitions.c_SizeIcon * 1.2f - getWidth() / 2, getY() + column * Definitions.c_SizeIcon * 1.2f, Definitions.c_SizeIcon, Definitions.c_SizeIcon);
+        batch.draw(m_Texture, getX() + row    * Definitions.c_SizeIcon * 1.2f - getWidth()  / 2,
+                              getY() + column * Definitions.c_SizeIcon * 1.2f - getHeight() / 2, Definitions.c_SizeIcon, Definitions.c_SizeIcon);
     }
 }
