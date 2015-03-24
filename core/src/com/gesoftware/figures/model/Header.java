@@ -58,7 +58,7 @@ public final class Header extends Group {
 
 
         final Figure figure = new Figure(shape,
-                                         m_Rating.getX() + (m_Rating.getWidth() - FontsManager.getLabelScoreDarkFont().getBounds("+" + value).width) / 2f,
+                                         Definitions.c_SizeWindow / 2,
                                          m_Rating.getY() + m_Rating.getHeight() / 2f);
         figure.addAction(Actions.sequence(Actions.moveTo(figure.getX(), figure.getY() + Definitions.c_DistanceScore, Definitions.c_DurationScore), Actions.run(new Runnable() {
             @Override

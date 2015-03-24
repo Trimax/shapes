@@ -18,9 +18,25 @@ public final class Figure extends Actor {
         m_Texture = TexturesManager.getTexture(figure.iterator().next().getRubyColor().getTextureName());
         m_Matrix  = AchievementsManager.computeMatrix(figure);
 
-        setBounds(x, y, m_Matrix.getWidth() * Definitions.c_SizeIcon, m_Matrix.getHeight() * Definitions.c_SizeIcon);
-        setScale(Definitions.c_SizeIcon / Definitions.c_SizeCell);
+        final Vec2i bounds = getBounds();
+        setBounds(x, y, bounds.getX() * Definitions.c_SizeIcon * 1.2f, bounds.getY() * Definitions.c_SizeIcon * 1.2f);
         setOrigin(getWidth() / 2, getHeight() / 2);
+    }
+
+    private Vec2i getBounds() {
+        final Vec2i bounds = new Vec2i();
+
+        for (int row = 0; row < m_Matrix.getWidth(); row++)
+            for (int column = 0; column < m_Matrix.getHeight(); column++)
+                if (m_Matrix.contains(row, column)) {
+                    if (row > bounds.getX())
+                        bounds.setX(row);
+
+                    if (column > bounds.getY())
+                        bounds.setY(column);
+                }
+
+        return Vec2i.add(bounds, 1);
     }
 
     @Override
@@ -34,6 +50,6 @@ public final class Figure extends Actor {
     }
 
     private void draw(final Batch batch, final int row, final int column, final float parentAlpha) {
-        batch.draw(m_Texture, getX() + column * Definitions.c_SizeIcon * 1.3f, getY() + row * Definitions.c_SizeIcon * 1.3f, getOriginX(), getOriginY(), getWidth(), getHeight(), getScaleX(), getScaleY(), getRotation(), 0, 0, m_Texture.getWidth(), m_Texture.getHeight(), false, false);
+        batch.draw(m_Texture, getX() + row * Definitions.c_SizeIcon * 1.2f - getWidth() / 2, getY() + column * Definitions.c_SizeIcon * 1.2f, Definitions.c_SizeIcon, Definitions.c_SizeIcon);
     }
 }
